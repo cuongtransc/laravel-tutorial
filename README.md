@@ -45,3 +45,32 @@ php artisan migrate
 
 php artisan make:model Task
 ```
+
+
+## Quick start with this repo
+
+```bash
+# Step 1: Clone project
+git clone https://github.com/cuongtransc/laravel-tutorial.git
+
+# Step 2: Generate .env
+cp .env.example .env
+php artisan key:generate
+
+# Edit .env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=coc
+DB_USERNAME=coc
+DB_PASSWORD=coc@123
+
+# Step 3: Start PostgreSQL server (via Docker)
+docker-compose up -d
+
+# Step 4: Init database
+php artisan migrate
+
+# Step 5: Run Laravel in dev mode
+php artisan serve
+```
