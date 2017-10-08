@@ -53,7 +53,10 @@ php artisan make:model Task
 # Step 1: Clone project
 git clone https://github.com/cuongtransc/laravel-tutorial.git
 
-# Step 2: Generate .env
+# Step 2: Install Lib
+composer install
+
+# Step 3: Generate .env
 cp .env.example .env
 php artisan key:generate
 
@@ -65,12 +68,12 @@ DB_DATABASE=coc
 DB_USERNAME=coc
 DB_PASSWORD=coc@123
 
-# Step 3: Start PostgreSQL server (via Docker)
+# Step 4: Start PostgreSQL server (via Docker)
 docker-compose up -d
 
-# Step 4: Init database
+# Step 5: Init database
 php artisan migrate
 
-# Step 5: Run Laravel in dev mode
+# Step 6: Run Laravel in dev mode
 php artisan serve
 ```
